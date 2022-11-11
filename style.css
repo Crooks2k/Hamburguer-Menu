@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgba(211, 211, 211, 0.226);
+}
+/*Containers position*/
+.main-king{
+    position: absolute;
+    top: 25%;
+    left: 35%;
+    width: 350px;
+    height: 350px;
+    background-color: rgba(184, 184, 184, 0.164);
+    box-shadow: 1px 2px 10px 0px rgba(153, 48, 48, 0.3);
+    border-radius:80px 0 80px 0; 
+}
+.main{
+    position: absolute;
+    top: 7%;
+    left: 7%;
+    width: 300px;
+    height: 300px;
+    background-color: rgba(49, 49, 49, 0.521);
+    box-shadow: 1px 2px 10px 0px rgba(0,0,0,0.3);
+    border-radius:80px 0 80px 0;  
+}
+/*Checkbox visibility*/
+#check{
+    display: none;
+}
+
+/*Lines create*/
+.bar{
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    cursor: pointer;
+    width: 50px;
+    height: 40px;
+}
+.bar span{
+    position: absolute;
+    width: 45px;
+    height: 7px;
+    background: white;
+    border-radius: 50px;
+    transition: 0.7s ease;
+    left: 0;
+    box-shadow: 1px 2px 10px 0px rgba(255, 255, 255, 0.3);
+}
+
+/*Bar position 1,2,3*/
+.bar span.first-line {
+    top: 0;
+}
+  
+.bar span.second-line {
+    top: 17px;
+ }
+  
+.bar span.third-line{
+    bottom: 0;
+}
+/*Checkbox conditions*/
+/*First line*/
+#check:checked ~ span.first-line {
+    transform: rotate(45deg);
+    transform-origin: top left;
+    width: 48px;
+    left: 5px;
+}
+/*Second line*/
+@keyframes line2-animation{
+    0%{
+        transform: scale(0.8);
+    }
+    25%{
+        transform: scale(0.7)
+    } 
+    50%{
+        transform: scale(0.6);
+    }
+    75%{
+        transform: scale(0.4);
+    }
+    100%{
+        transform: scale(0.2);
+    }
+}
+#check:checked ~ span.second-line{
+    animation: line2-animation 2s;
+    opacity: 0;
+}
+/*Third line*/
+#check:checked ~ span.third-line{
+    transform: rotate(-45deg);
+    transform-origin: top left;
+    width: 48px;
+    bottom: -1px;
+    box-shadow: 0 0 10px #495057;
+  }
+/*Credits*/
+h1{
+    color:#87888875;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    font-style: italic;
+    font-weight: 900;
+}
+.credits{
+    color:#87888859;
+    margin-top: -0.2rem;
+    margin-left: 3rem;
+    font-style: italic;
+    font-weight: 900;
+}

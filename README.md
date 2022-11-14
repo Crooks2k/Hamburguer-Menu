@@ -1,4 +1,5 @@
 ### Hamburguer-Menu__Animation
+<hr>
 Desarrollo de menú hamburguesa con varias animaciones y efectos aprendidos.
  - Para este desarrollo se usaron Keyframes y Checkbox.
  <br>
